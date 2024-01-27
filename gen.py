@@ -878,6 +878,12 @@ class Canvas:
             self.generate_circles(complexity, color_palette, art_style, layer, magnitude, 1)
 
     def blit_to_canvas(self):
+        now = 150
+        self.bg_layer.set_alpha(now)
+        self.layer_one.set_alpha(now)
+        self.layer_two.set_alpha(now)
+        self.fg_layer.set_alpha(now)
+
         self.canvas.blit(self.bg_layer, (0, 0))
         self.canvas.blit(self.layer_one, (0, 0))
         self.canvas.blit(self.layer_two, (0, 0))
